@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<festival>
+    <meta>
+        <name>Prague GastroJazz Open</name>
+        <year>2026</year>
+        <dates>
+            <start>2026-06-19</start>
+            <end>2026-06-21</end>
+        </dates>
+        <location>Střelecký Island, Prague</location>
+    </meta>
+
+    <venues>
+        <venue id="v_main">
+            <name>Groove Stage</name>
+            <type>Open Air Stage</type>
+            <description>Main stage for big bands and headliners.</description>
+        </venue>
+        <venue id="v_lab">
+            <name>Taste Lab</name>
+            <type>Workshop Tent</type>
+            <description>Covered area for cooking shows and tastings.</description>
+        </venue>
+        <venue id="v_chill">
+            <name>River Lounge</name>
+            <type>Relax Zone</type>
+            <description>Smaller stage by the water for DJs and soloists.</description>
+        </venue>
+    </venues>
+
+    <performers>
+        <performer id="p01"><name>The Velvet Sax</name><type>Band</type><genre>Smooth Jazz</genre><country>USA</country></performer>
+        <performer id="p02"><name>Chef Gordon Blue</name><type>Chef</type><specialty>French Cuisine</specialty><country>FR</country></performer>
+        <performer id="p03"><name>Swing Kings</name><type>Band</type><genre>Electro Swing</genre></performer>
+        <performer id="p04"><name>Sushi Master Kenji</name><type>Chef</type><specialty>Japanese</specialty></performer>
+        <performer id="p05"><name>Prague Funk Unit</name><type>Band</type><genre>Funk</genre></performer>
+        <performer id="p06"><name>Coffee Nerds</name><type>Lecturer</type><specialty>Barista Workshop</specialty></performer>
+        <performer id="p07"><name>Soul Sisters</name><type>Band</type><genre>R&amp;B</genre></performer>
+        <performer id="p08"><name>Burger Brothers</name><type>Chef</type><specialty>American BBQ</specialty></performer>
+        <performer id="p09"><name>Acid Rain Trio</name><type>Band</type><genre>Acid Jazz</genre></performer>
+        <performer id="p10"><name>Vegan Vibes</name><type>Chef</type><specialty>Plant Based</specialty></performer>
+        <performer id="p11"><name>Blue Note Quartet</name><type>Band</type><genre>Bebop</genre></performer>
+        <performer id="p12"><name>Pasta La Vista</name><type>Chef</type><specialty>Italian</specialty></performer>
+        <performer id="p13"><name>DJ Vinyl Cat</name><type>DJ</type><genre>Lo-Fi</genre></performer>
+        <performer id="p14"><name>Chilli Doctor</name><type>Lecturer</type><specialty>Spices</specialty></performer>
+        <performer id="p15"><name>Sax on the Beach</name><type>Band</type><genre>Pop Jazz</genre></performer>
+        <performer id="p16"><name>Winery Moravia</name><type>Sommelier</type><specialty>Wine Tasting</specialty></performer>
+        <performer id="p17"><name>The Bassment</name><type>Band</type><genre>Drum&amp;Bass Jazz</genre></performer>
+        <performer id="p18"><name>Sweet Tooth Bakery</name><type>Chef</type><specialty>Desserts</specialty></performer>
+        <performer id="p19"><name>Old Town Trumpet</name><type>Soloist</type><genre>Classic Jazz</genre></performer>
+        <performer id="p20"><name>Brew Master John</name><type>Brewer</type><specialty>Craft Beer</specialty></performer>
+        <performer id="p21"><name>Funky Town</name><type>Band</type><genre>Funk</genre></performer>
+        <performer id="p22"><name>Asian Fusion Boys</name><type>Chef</type><specialty>Vietnamese</specialty></performer>
+        <performer id="p23"><name>Piano Man Jack</name><type>Soloist</type><genre>Blues</genre></performer>
+        <performer id="p24"><name>Cheese Please</name><type>Sommelier</type><specialty>Fromagerie</specialty></performer>
+        <performer id="p25"><name>Midnight Horns</name><type>Band</type><genre>Ska Jazz</genre></performer>
+        <performer id="p26"><name>Taco Truck Heroes</name><type>Chef</type><specialty>Mexican</specialty></performer>
+        <performer id="p27"><name>Electro Swing Mafia</name><type>Band</type><genre>Electro Swing</genre></performer>
+        <performer id="p28"><name>Curry House</name><type>Chef</type><specialty>Indian</specialty></performer>
+        <performer id="p29"><name>Vocal Harmony</name><type>Choir</type><genre>Gospel</genre></performer>
+        <performer id="p30"><name>Fish &amp; Chips Ltd</name><type>Chef</type><specialty>British</specialty></performer>
+        <performer id="p31"><name>Nordic Jazz Trio</name><type>Band</type><genre>Avant-garde</genre></performer>
+        <performer id="p32"><name>Raw Food Lenka</name><type>Chef</type><specialty>Raw</specialty></performer>
+        <performer id="p33"><name>Cuban Cigar Club</name><type>Band</type><genre>Latin Jazz</genre></performer>
+        <performer id="p34"><name>Paella Masters</name><type>Chef</type><specialty>Spanish</specialty></performer>
+        <performer id="p35"><name>Harmonica Pete</name><type>Soloist</type><genre>Blues</genre></performer>
+        <performer id="p36"><name>Donut Worry</name><type>Chef</type><specialty>Sweets</specialty></performer>
+        <performer id="p37"><name>Brass Band Brno</name><type>Band</type><genre>Brass</genre></performer>
+        <performer id="p38"><name>Kimchi King</name><type>Chef</type><specialty>Korean</specialty></performer>
+        <performer id="p39"><name>Gypsy Swingers</name><type>Band</type><genre>Gypsy Jazz</genre></performer>
+        <performer id="p40"><name>Hummus Heaven</name><type>Chef</type><specialty>Middle Eastern</specialty></performer>
+        <performer id="p41"><name>Modern Art Orchestra</name><type>Big Band</type><genre>Orchestral</genre></performer>
+        <performer id="p42"><name>Oyster Bar</name><type>Chef</type><specialty>Seafood</specialty></performer>
+        <performer id="p43"><name>Loop Station Mike</name><type>Soloist</type><genre>Beatbox Jazz</genre></performer>
+        <performer id="p44"><name>Choco Museum</name><type>Chocolatier</type><specialty>Chocolate</specialty></performer>
+        <performer id="p45"><name>New Orleans Spirit</name><type>Band</type><genre>Trad Jazz</genre></performer>
+        <performer id="p46"><name>Tea Master Li</name><type>Lecturer</type><specialty>Tea Ceremony</specialty></performer>
+        <performer id="p47"><name>Fusion Strings</name><type>Band</type><genre>Classical Crossover</genre></performer>
+        <performer id="p48"><name>Balkan Beats</name><type>Band</type><genre>World Music</genre></performer>
+        <performer id="p49"><name>Smooth Operator</name><type>Soloist</type><genre>Soul</genre></performer>
+        <performer id="p50"><name>Whisky Ambassador</name><type>Sommelier</type><specialty>Spirits</specialty></performer>
+        <performer id="p51"><name>High Hat Drums</name><type>Soloist</type><genre>Percussion</genre></performer>
+        <performer id="p52"><name>Cajun Kitchen</name><type>Chef</type><specialty>Creole</specialty></performer>
+        <performer id="p53"><name>Afro Jazz Collective</name><type>Band</type><genre>Afrobeat</genre></performer>
+        <performer id="p54"><name>Gelato Giovanni</name><type>Chef</type><specialty>Ice Cream</specialty></performer>
+        <performer id="p55"><name>Experimental Noise</name><type>Band</type><genre>Free Jazz</genre></performer>
+        <performer id="p56"><name>Tapas Bar</name><type>Chef</type><specialty>Finger Food</specialty></performer>
+        <performer id="p57"><name>Retro Vinyls</name><type>DJ</type><genre>Oldies</genre></performer>
+        <performer id="p58"><name>Molecule Gastronomy</name><type>Chef</type><specialty>Science Food</specialty></performer>
+        <performer id="p59"><name>Silent Disco Squad</name><type>DJ</type><genre>Various</genre></performer>
+        <performer id="p60"><name>Last Call Band</name><type>Band</type><genre>Party Jazz</genre></performer>
+    </performers>
+
+    <events>
+        <event id="e01"><day>Fri</day><time>16:00</time><venue_ref>v_main</venue_ref><performer_ref>p03</performer_ref><name>Opening Swing</name></event>
+        <event id="e02"><day>Fri</day><time>16:00</time><venue_ref>v_lab</venue_ref><performer_ref>p04</performer_ref><name>Sushi Art Show</name></event>
+        <event id="e03"><day>Fri</day><time>16:30</time><venue_ref>v_chill</venue_ref><performer_ref>p13</performer_ref><name>Sunset Lo-Fi</name></event>
+        <event id="e04"><day>Fri</day><time>17:00</time><venue_ref>v_main</venue_ref><performer_ref>p05</performer_ref><name>Funky Afternoon</name></event>
+        <event id="e05"><day>Fri</day><time>17:30</time><venue_ref>v_lab</venue_ref><performer_ref>p08</performer_ref><name>Perfect Burger Tricks</name></event>
+        <event id="e06"><day>Fri</day><time>18:00</time><venue_ref>v_chill</venue_ref><performer_ref>p19</performer_ref><name>Trumpet Solo</name></event>
+        <event id="e07"><day>Fri</day><time>18:30</time><venue_ref>v_main</venue_ref><performer_ref>p01</performer_ref><name>Velvet Sax Live</name></event>
+        <event id="e08"><day>Fri</day><time>19:00</time><venue_ref>v_lab</venue_ref><performer_ref>p16</performer_ref><name>Moravian Wine Tasting</name></event>
+        <event id="e09"><day>Fri</day><time>19:30</time><venue_ref>v_chill</venue_ref><performer_ref>p23</performer_ref><name>Piano Blues</name></event>
+        <event id="e10"><day>Fri</day><time>20:00</time><venue_ref>v_main</venue_ref><performer_ref>p07</performer_ref><name>Soul Sisters Headline</name></event>
+        <event id="e11"><day>Fri</day><time>20:30</time><venue_ref>v_lab</venue_ref><performer_ref>p20</performer_ref><name>Craft Beer Science</name></event>
+        <event id="e12"><day>Fri</day><time>21:00</time><venue_ref>v_chill</venue_ref><performer_ref>p57</performer_ref><name>Vinyl Night</name></event>
+        <event id="e13"><day>Fri</day><time>21:30</time><venue_ref>v_main</venue_ref><performer_ref>p09</performer_ref><name>Acid Rain Laser Show</name></event>
+        <event id="e14"><day>Fri</day><time>22:00</time><venue_ref>v_lab</venue_ref><performer_ref>p42</performer_ref><name>Oyster &amp; Champagne</name></event>
+        <event id="e15"><day>Fri</day><time>23:00</time><venue_ref>v_chill</venue_ref><performer_ref>p59</performer_ref><name>Silent Disco Start</name></event>
+        
+        <event id="e16"><day>Sat</day><time>10:00</time><venue_ref>v_lab</venue_ref><performer_ref>p06</performer_ref><name>Morning Coffee Brew</name></event>
+        <event id="e17"><day>Sat</day><time>11:00</time><venue_ref>v_main</venue_ref><performer_ref>p37</performer_ref><name>Brass Band Wake Up</name></event>
+        <event id="e18"><day>Sat</day><time>11:30</time><venue_ref>v_lab</venue_ref><performer_ref>p18</performer_ref><name>Sweet Brunch</name></event>
+        <event id="e19"><day>Sat</day><time>12:00</time><venue_ref>v_chill</venue_ref><performer_ref>p35</performer_ref><name>Harmonica Chill</name></event>
+        <event id="e20"><day>Sat</day><time>12:30</time><venue_ref>v_main</venue_ref><performer_ref>p11</performer_ref><name>Bebop Lunch</name></event>
+        <event id="e21"><day>Sat</day><time>13:00</time><venue_ref>v_lab</venue_ref><performer_ref>p12</performer_ref><name>Pasta Making Live</name></event>
+        <event id="e22"><day>Sat</day><time>13:30</time><venue_ref>v_chill</venue_ref><performer_ref>p43</performer_ref><name>Loop Station Magic</name></event>
+        <event id="e23"><day>Sat</day><time>14:00</time><venue_ref>v_main</venue_ref><performer_ref>p15</performer_ref><name>Sax on the Beach Show</name></event>
+        <event id="e24"><day>Sat</day><time>14:30</time><venue_ref>v_lab</venue_ref><performer_ref>p14</performer_ref><name>Chilli Eating Contest</name></event>
+        <event id="e25"><day>Sat</day><time>15:00</time><venue_ref>v_chill</venue_ref><performer_ref>p49</performer_ref><name>Smooth Soul Session</name></event>
+        <event id="e26"><day>Sat</day><time>15:30</time><venue_ref>v_main</venue_ref><performer_ref>p17</performer_ref><name>Bassment Grooves</name></event>
+        <event id="e27"><day>Sat</day><time>16:00</time><venue_ref>v_lab</venue_ref><performer_ref>p22</performer_ref><name>Asian Street Food</name></event>
+        <event id="e28"><day>Sat</day><time>16:30</time><venue_ref>v_chill</venue_ref><performer_ref>p51</performer_ref><name>Percussion Workshop</name></event>
+        <event id="e29"><day>Sat</day><time>17:00</time><venue_ref>v_main</venue_ref><performer_ref>p21</performer_ref><name>Funky Town Hits</name></event>
+        <event id="e30"><day>Sat</day><time>17:30</time><venue_ref>v_lab</venue_ref><performer_ref>p24</performer_ref><name>Cheese &amp; Wine Pairing</name></event>
+        <event id="e31"><day>Sat</day><time>18:00</time><venue_ref>v_chill</venue_ref><performer_ref>p47</performer_ref><name>Fusion Strings Sunset</name></event>
+        <event id="e32"><day>Sat</day><time>19:00</time><venue_ref>v_main</venue_ref><performer_ref>p25</performer_ref><name>Midnight Horns Live</name></event>
+        <event id="e33"><day>Sat</day><time>19:30</time><venue_ref>v_lab</venue_ref><performer_ref>p02</performer_ref><name>Chef Gordon Masterclass</name></event>
+        <event id="e34"><day>Sat</day><time>20:00</time><venue_ref>v_chill</venue_ref><performer_ref>p13</performer_ref><name>Vinyl Cat Returns</name></event>
+        <event id="e35"><day>Sat</day><time>21:00</time><venue_ref>v_main</venue_ref><performer_ref>p27</performer_ref><name>Electro Swing Party</name></event>
+        <event id="e36"><day>Sat</day><time>21:30</time><venue_ref>v_lab</venue_ref><performer_ref>p50</performer_ref><name>Whisky Night</name></event>
+        <event id="e37"><day>Sat</day><time>23:00</time><venue_ref>v_main</venue_ref><performer_ref>p03</performer_ref><name>Swing Kings Afterparty</name></event>
+
+        <event id="e38"><day>Sun</day><time>10:00</time><venue_ref>v_lab</venue_ref><performer_ref>p32</performer_ref><name>Raw Breakfast</name></event>
+        <event id="e39"><day>Sun</day><time>10:30</time><venue_ref>v_chill</venue_ref><performer_ref>p46</performer_ref><name>Tea Ceremony</name></event>
+        <event id="e40"><day>Sun</day><time>11:00</time><venue_ref>v_main</venue_ref><performer_ref>p29</performer_ref><name>Sunday Gospel</name></event>
+        <event id="e41"><day>Sun</day><time>11:30</time><venue_ref>v_lab</venue_ref><performer_ref>p36</performer_ref><name>Donut Decoration</name></event>
+        <event id="e42"><day>Sun</day><time>12:00</time><venue_ref>v_chill</venue_ref><performer_ref>p48</performer_ref><name>Balkan Chill</name></event>
+        <event id="e43"><day>Sun</day><time>12:30</time><venue_ref>v_main</venue_ref><performer_ref>p31</performer_ref><name>Nordic Jazz Mood</name></event>
+        <event id="e44"><day>Sun</day><time>13:00</time><venue_ref>v_lab</venue_ref><performer_ref>p28</performer_ref><name>Curry Secrets</name></event>
+        <event id="e45"><day>Sun</day><time>13:30</time><venue_ref>v_chill</venue_ref><performer_ref>p54</performer_ref><name>Gelato Tasting</name></event>
+        <event id="e46"><day>Sun</day><time>14:00</time><venue_ref>v_main</venue_ref><performer_ref>p33</performer_ref><name>Cuban Afternoon</name></event>
+        <event id="e47"><day>Sun</day><time>14:30</time><venue_ref>v_lab</venue_ref><performer_ref>p44</performer_ref><name>Choco Pralines</name></event>
+        <event id="e48"><day>Sun</day><time>15:00</time><venue_ref>v_chill</venue_ref><performer_ref>p23</performer_ref><name>Piano Farewell</name></event>
+        <event id="e49"><day>Sun</day><time>15:30</time><venue_ref>v_main</venue_ref><performer_ref>p39</performer_ref><name>Gypsy Swing</name></event>
+        <event id="e50"><day>Sun</day><time>16:00</time><venue_ref>v_lab</venue_ref><performer_ref>p10</performer_ref><name>Vegan Cooking</name></event>
+        <event id="e51"><day>Sun</day><time>16:30</time><venue_ref>v_chill</venue_ref><performer_ref>p56</performer_ref><name>Tapas &amp; Sherry</name></event>
+        <event id="e52"><day>Sun</day><time>17:00</time><venue_ref>v_main</venue_ref><performer_ref>p45</performer_ref><name>New Orleans Parade</name></event>
+        <event id="e53"><day>Sun</day><time>17:30</time><venue_ref>v_lab</venue_ref><performer_ref>p58</performer_ref><name>Molecule Show</name></event>
+        <event id="e54"><day>Sun</day><time>18:00</time><venue_ref>v_chill</venue_ref><performer_ref>p55</performer_ref><name>Experimental Sunset</name></event>
+        <event id="e55"><day>Sun</day><time>18:30</time><venue_ref>v_main</venue_ref><performer_ref>p53</performer_ref><name>Afro Jazz Energy</name></event>
+        <event id="e56"><day>Sun</day><time>19:00</time><venue_ref>v_lab</venue_ref><performer_ref>p26</performer_ref><name>Tacos Fiesta</name></event>
+        <event id="e57"><day>Sun</day><time>19:30</time><venue_ref>v_chill</venue_ref><performer_ref>p19</performer_ref><name>Trumpet Goodbye</name></event>
+        <event id="e58"><day>Sun</day><time>20:00</time><venue_ref>v_main</venue_ref><performer_ref>p41</performer_ref><name>Grand Finale Orchestra</name></event>
+        <event id="e59"><day>Sun</day><time>21:00</time><venue_ref>v_lab</venue_ref><performer_ref>p34</performer_ref><name>Big Paella Pan</name></event>
+        <event id="e60"><day>Sun</day><time>22:00</time><venue_ref>v_main</venue_ref><performer_ref>p60</performer_ref><name>Last Call Jam</name></event>
+    </events>
+</festival>
