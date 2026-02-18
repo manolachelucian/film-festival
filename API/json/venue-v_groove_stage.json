@@ -1,0 +1,10 @@
+
+{
+  "id": "v_groove_stage",
+  "name": "Groove Stage",
+  "type": "main_stage",
+  "capacity": 2500,
+  "indoor": false,
+  "description": "Large open-air stage for headline concerts."
+}
+        

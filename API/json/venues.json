@@ -1,0 +1,40 @@
+
+{
+  "total": 4,
+  "items": [
+
+    {
+      "id": "v_groove_stage",
+      "name": "Groove Stage",
+      "type": "main_stage",
+      "capacity": 2500,
+      "indoor": false,
+      "description": "Large open-air stage for headline concerts."
+    },
+    {
+      "id": "v_taste_lab",
+      "name": "Taste Lab",
+      "type": "culinary_zone",
+      "capacity": 700,
+      "indoor": true,
+      "description": "Covered culinary zone for demonstrations and tastings."
+    },
+    {
+      "id": "v_river_lounge",
+      "name": "River Lounge",
+      "type": "lounge_stage",
+      "capacity": 400,
+      "indoor": false,
+      "description": "Relaxed waterfront stage for acoustic and chill sets."
+    },
+    {
+      "id": "v_workshop_tent",
+      "name": "Workshop Tent",
+      "type": "workshop_area",
+      "capacity": 300,
+      "indoor": true,
+      "description": "Hands-on area for masterclasses and food labs."
+    }
+  ]
+}
+  

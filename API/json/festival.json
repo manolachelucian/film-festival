@@ -1,0 +1,59 @@
+
+{
+  "id": "prague-gastrojazz-open-2026",
+  "name": "Prague GastroJazz Open 2026",
+  "description": "Three-day city festival combining live jazz and curated culinary experiences.",
+  "dates": {
+    "start": "2026-06-19",
+    "end": "2026-06-21"
+  },
+  "location": {
+    "siteName": "Strelecky Island",
+    "city": "Prague",
+    "country": "CZ",
+    "timezone": "Europe/Prague"
+  },
+  "links": {
+    "website": "https://www.gastrojazz.cz",
+    "tickets": "https://tickets.gastrojazz.cz",
+    "instagram": "https://www.instagram.com/gastrojazzopen",
+    "facebook": "https://www.facebook.com/gastrojazzopen"
+  },
+  "tickets": [
+
+    {
+      "id": "t_basic_day",
+      "name": "Basic Day Pass",
+      "tier": "basic",
+      "validDays": 1,
+      "price": {
+        "amount": 990,
+        "currency": "CZK"
+      },
+      "description": "Access to all music stages for one selected day."
+    },
+    {
+      "id": "t_gastro_weekend",
+      "name": "Gastro Weekend Pass",
+      "tier": "gastro",
+      "validDays": 3,
+      "price": {
+        "amount": 2590,
+        "currency": "CZK"
+      },
+      "description": "Full festival access plus five tasting tokens."
+    },
+    {
+      "id": "t_vip_weekend",
+      "name": "VIP Weekend Pass",
+      "tier": "vip",
+      "validDays": 3,
+      "price": {
+        "amount": 4990,
+        "currency": "CZK"
+      },
+      "description": "Priority seating, backstage lounge, and chef meet-and-greet."
+    }
+  ]
+}
+  

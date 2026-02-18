@@ -1,146 +1,294 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
 
-    <xs:element name="festival">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="meta" type="MetaType"/>
-                <xs:element name="venues" type="VenuesType"/>
-                <xs:element name="performers" type="PerformersType"/>
-                <xs:element name="events" type="EventsType"/>
-            </xs:sequence>
-        </xs:complexType>
-        
-        <xs:key name="venueKey">
-            <xs:selector xpath="venues/venue"/>
-            <xs:field xpath="@id"/>
-        </xs:key>
-        <xs:key name="performerKey">
-            <xs:selector xpath="performers/performer"/>
-            <xs:field xpath="@id"/>
-        </xs:key>
-        <xs:keyref name="eventVenueRef" refer="venueKey">
-            <xs:selector xpath="events/event/venue_ref"/>
-            <xs:field xpath="."/>
-        </xs:keyref>
-        <xs:keyref name="eventPerformerRef" refer="performerKey">
-            <xs:selector xpath="events/event/performer_ref"/>
-            <xs:field xpath="."/>
-        </xs:keyref>
-    </xs:element>
+  <xs:element name="festival" type="FestivalType">
+    <xs:key name="ticketKey">
+      <xs:selector xpath="tickets/ticket"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:key name="venueKey">
+      <xs:selector xpath="venues/venue"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:key name="performerKey">
+      <xs:selector xpath="performers/performer"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:key name="eventKey">
+      <xs:selector xpath="events/event"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:keyref name="eventVenueRef" refer="venueKey">
+      <xs:selector xpath="events/event/venueRef"/>
+      <xs:field xpath="."/>
+    </xs:keyref>
+    <xs:keyref name="eventPerformerRef" refer="performerKey">
+      <xs:selector xpath="events/event/performerRef"/>
+      <xs:field xpath="."/>
+    </xs:keyref>
+  </xs:element>
 
-    <xs:complexType name="MetaType">
-        <xs:sequence>
-            <xs:element name="name" type="xs:string"/>
-            <xs:element name="year">
-                <xs:simpleType>
-                    <xs:restriction base="xs:integer">
-                        <xs:minInclusive value="2026"/>
-                        <xs:maxInclusive value="2026"/>
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element name="dates">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="start" type="DateType"/>
-                        <xs:element name="end" type="DateType"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-            <xs:element name="location" type="xs:string"/>
-        </xs:sequence>
-    </xs:complexType>
+  <xs:complexType name="FestivalType">
+    <xs:sequence>
+      <xs:element name="meta" type="MetaType"/>
+      <xs:element name="tickets" type="TicketsType"/>
+      <xs:element name="venues" type="VenuesType"/>
+      <xs:element name="performers" type="PerformersType"/>
+      <xs:element name="events" type="EventsType"/>
+    </xs:sequence>
+  </xs:complexType>
 
-    <xs:complexType name="VenuesType">
-        <xs:sequence>
-            <xs:element name="venue" maxOccurs="unbounded">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="name" type="xs:string"/>
-                        <xs:element name="type">
-                            <xs:simpleType>
-                                <xs:restriction base="xs:string">
-                                    <xs:enumeration value="Open Air Stage"/>
-                                    <xs:enumeration value="Workshop Tent"/>
-                                    <xs:enumeration value="Relax Zone"/>
-                                    <xs:enumeration value="Indoor Hall"/>
-                                </xs:restriction>
-                            </xs:simpleType>
-                        </xs:element>
-                        <xs:element name="description" type="xs:string"/>
-                    </xs:sequence>
-                    <xs:attribute name="id" use="required">
-                        <xs:simpleType>
-                            <xs:restriction base="xs:ID">
-                                <xs:pattern value="v_[a-z0-9_]+"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:attribute>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
+  <xs:complexType name="MetaType">
+    <xs:sequence>
+      <xs:element name="id" type="FestivalIdType"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="year" type="FestivalYearType"/>
+      <xs:element name="dates" type="FestivalDatesType"/>
+      <xs:element name="location" type="LocationType"/>
+      <xs:element name="links" type="LinksType"/>
+    </xs:sequence>
+  </xs:complexType>
 
-    <xs:complexType name="PerformersType">
-        <xs:sequence>
-            <xs:element name="performer" maxOccurs="unbounded">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="name" type="xs:string"/>
-                        <xs:element name="type" type="xs:string"/> <xs:choice>
-                            <xs:element name="genre" type="xs:string"/>
-                            <xs:element name="specialty" type="xs:string"/>
-                        </xs:choice>
-                        <xs:element name="country" type="xs:string" minOccurs="0"/>
-                    </xs:sequence>
-                    <xs:attribute name="id" use="required">
-                        <xs:simpleType>
-                            <xs:restriction base="xs:ID">
-                                <xs:pattern value="p[0-9]+"/>
-                            </xs:restriction>
-                        </xs:simpleType>
-                    </xs:attribute>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
+  <xs:complexType name="FestivalDatesType">
+    <xs:sequence>
+      <xs:element name="start" type="FestivalDateType"/>
+      <xs:element name="end" type="FestivalDateType"/>
+    </xs:sequence>
+  </xs:complexType>
 
-    <xs:complexType name="EventsType">
-        <xs:sequence>
-            <xs:element name="event" maxOccurs="unbounded">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="day">
-                            <xs:simpleType>
-                                <xs:restriction base="xs:string">
-                                    <xs:enumeration value="Fri"/>
-                                    <xs:enumeration value="Sat"/>
-                                    <xs:enumeration value="Sun"/>
-                                </xs:restriction>
-                            </xs:simpleType>
-                        </xs:element>
-                        <xs:element name="time">
-                            <xs:simpleType>
-                                <xs:restriction base="xs:string">
-                                    <xs:pattern value="([01][0-9]|2[0-3]):[0-5][0-9]"/>
-                                </xs:restriction>
-                            </xs:simpleType>
-                        </xs:element>
-                        <xs:element name="venue_ref" type="xs:string"/>
-                        <xs:element name="performer_ref" type="xs:string"/>
-                        <xs:element name="name" type="xs:string"/>
-                    </xs:sequence>
-                    <xs:attribute name="id" type="xs:ID" use="required"/>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
+  <xs:complexType name="LocationType">
+    <xs:sequence>
+      <xs:element name="siteName" type="xs:string"/>
+      <xs:element name="city" type="xs:string"/>
+      <xs:element name="country" type="CountryCodeType"/>
+      <xs:element name="timezone" type="TimezoneType"/>
+    </xs:sequence>
+  </xs:complexType>
 
-    <xs:simpleType name="DateType">
-        <xs:restriction base="xs:string">
-            <xs:pattern value="\d{4}-\d{2}-\d{2}"/>
-        </xs:restriction>
-    </xs:simpleType>
+  <xs:complexType name="LinksType">
+    <xs:sequence>
+      <xs:element name="website" type="HttpsUrlType"/>
+      <xs:element name="tickets" type="HttpsUrlType"/>
+      <xs:element name="instagram" type="HttpsUrlType"/>
+      <xs:element name="facebook" type="HttpsUrlType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TicketsType">
+    <xs:sequence>
+      <xs:element name="ticket" type="TicketType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="TicketType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="tier" type="TicketTierType"/>
+      <xs:element name="validDays" type="ValidDaysType"/>
+      <xs:element name="price" type="PriceWithCurrencyType"/>
+      <xs:element name="description" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="TicketIdType" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="PriceWithCurrencyType">
+    <xs:simpleContent>
+      <xs:extension base="PriceAmountType">
+        <xs:attribute name="currency" type="CurrencyCodeType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="VenuesType">
+    <xs:sequence>
+      <xs:element name="venue" type="VenueType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="VenueType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="type" type="VenueKindType"/>
+      <xs:element name="capacity" type="CapacityType"/>
+      <xs:element name="indoor" type="xs:boolean"/>
+      <xs:element name="description" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="VenueIdType" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="PerformersType">
+    <xs:sequence>
+      <xs:element name="performer" type="PerformerType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PerformerType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="category" type="PerformerCategoryType"/>
+      <xs:element name="specialty" type="xs:string"/>
+      <xs:element name="country" type="CountryCodeType"/>
+      <xs:element name="description" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="PerformerIdType" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="EventsType">
+    <xs:sequence>
+      <xs:element name="event" type="EventType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="EventType">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string"/>
+      <xs:element name="date" type="FestivalDateType"/>
+      <xs:element name="startTime" type="TimeType"/>
+      <xs:element name="endTime" type="TimeType"/>
+      <xs:element name="venueRef" type="VenueIdType"/>
+      <xs:element name="performerRef" type="PerformerIdType"/>
+      <xs:element name="description" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="EventIdType" use="required"/>
+  </xs:complexType>
+
+  <!-- custom constraint: festival slug must be lowercase words separated by dashes -->
+  <xs:simpleType name="FestivalIdType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-z0-9]+(-[a-z0-9]+)*"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- custom constraint: project scope is limited to years 2026-2030 -->
+  <xs:simpleType name="FestivalYearType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="2026"/>
+      <xs:maxInclusive value="2030"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- custom constraint: dates must stay within planned festival seasons (2026-2030) -->
+  <xs:simpleType name="FestivalDateType">
+    <xs:restriction base="xs:date">
+      <xs:minInclusive value="2026-01-01"/>
+      <xs:maxInclusive value="2030-12-31"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- custom constraint: timezone must be in region/city format -->
+  <xs:simpleType name="TimezoneType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z_]+/[A-Za-z_]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- custom constraint: external links must use HTTPS -->
+  <xs:simpleType name="HttpsUrlType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="https://.+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- custom constraint: ticket IDs must start with t_ -->
+  <xs:simpleType name="TicketIdType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="t_[a-z0-9_]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- custom constraint: ticket tiers are limited to supported sale plans -->
+  <xs:simpleType name="TicketTierType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="basic"/>
+      <xs:enumeration value="gastro"/>
+      <xs:enumeration value="vip"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- custom constraint: ticket validity can be only 1 to 3 festival days -->
+  <xs:simpleType name="ValidDaysType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- custom constraint: currency can only be CZK or EUR -->
+  <xs:simpleType name="CurrencyCodeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CZK"/>
+      <xs:enumeration value="EUR"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- custom constraint: ticket price range for this project -->
+  <xs:simpleType name="PriceAmountType">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="20000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- custom constraint: venue IDs must start with v_ -->
+  <xs:simpleType name="VenueIdType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="v_[a-z0-9_]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- custom constraint: allowed venue categories for API filtering -->
+  <xs:simpleType name="VenueKindType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="main_stage"/>
+      <xs:enumeration value="culinary_zone"/>
+      <xs:enumeration value="lounge_stage"/>
+      <xs:enumeration value="workshop_area"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- custom constraint: venue capacity must stay in realistic operational limits -->
+  <xs:simpleType name="CapacityType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="50"/>
+      <xs:maxInclusive value="5000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- custom constraint: performer IDs must start with p_ -->
+  <xs:simpleType name="PerformerIdType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="p_[a-z0-9_]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- custom constraint: performer classification supports music and chef acts only -->
+  <xs:simpleType name="PerformerCategoryType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="music"/>
+      <xs:enumeration value="chef"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- custom constraint: country code must be uppercase ISO-like 2-letter code -->
+  <xs:simpleType name="CountryCodeType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- custom constraint: event IDs must start with e_ -->
+  <xs:simpleType name="EventIdType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="e_[a-z0-9_]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- custom constraint: event time uses 24-hour HH:MM format -->
+  <xs:simpleType name="TimeType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([01][0-9]|2[0-3]):[0-5][0-9]"/>
+    </xs:restriction>
+  </xs:simpleType>
 
 </xs:schema>

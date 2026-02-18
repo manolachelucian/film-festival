@@ -1,0 +1,18 @@
+
+{
+  "id": "e_opening_swing",
+  "title": "Opening Swing",
+  "date": "2026-06-19",
+  "startTime": "16:00",
+  "endTime": "17:00",
+  "venue": {
+    "id": "v_groove_stage",
+    "name": "Groove Stage"
+  },
+  "performer": {
+    "id": "p_swing_kings",
+    "name": "Swing Kings"
+  },
+  "description": "High-energy opening set with electro-swing classics."
+}
+        

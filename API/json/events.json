@@ -1,0 +1,141 @@
+
+{
+  "filters": {
+    "day": "",
+    "venueId": "",
+    "performerId": ""
+  },
+  "total": 8,
+  "items": [
+
+    {
+      "id": "e_opening_swing",
+      "title": "Opening Swing",
+      "date": "2026-06-19",
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "venue": {
+        "id": "v_groove_stage",
+        "name": "Groove Stage"
+      },
+      "performer": {
+        "id": "p_swing_kings",
+        "name": "Swing Kings"
+      },
+      "description": "High-energy opening set with electro-swing classics."
+    },
+    {
+      "id": "e_sushi_art_show",
+      "title": "Sushi Art Show",
+      "date": "2026-06-19",
+      "startTime": "16:00",
+      "endTime": "17:00",
+      "venue": {
+        "id": "v_taste_lab",
+        "name": "Taste Lab"
+      },
+      "performer": {
+        "id": "p_kenji",
+        "name": "Sushi Master Kenji"
+      },
+      "description": "Interactive sushi preparation from premium ingredients."
+    },
+    {
+      "id": "e_soul_sisters_headline",
+      "title": "Soul Sisters Headline",
+      "date": "2026-06-19",
+      "startTime": "20:00",
+      "endTime": "21:30",
+      "venue": {
+        "id": "v_groove_stage",
+        "name": "Groove Stage"
+      },
+      "performer": {
+        "id": "p_soul_sisters",
+        "name": "Soul Sisters"
+      },
+      "description": "Main evening concert by the Soul Sisters."
+    },
+    {
+      "id": "e_morning_tea_ritual",
+      "title": "Morning Tea Ritual",
+      "date": "2026-06-20",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "venue": {
+        "id": "v_river_lounge",
+        "name": "River Lounge"
+      },
+      "performer": {
+        "id": "p_tea_master_li",
+        "name": "Tea Master Li"
+      },
+      "description": "Mindful tea ceremony paired with ambient jazz."
+    },
+    {
+      "id": "e_pasta_making_live",
+      "title": "Pasta Making Live",
+      "date": "2026-06-20",
+      "startTime": "13:00",
+      "endTime": "14:00",
+      "venue": {
+        "id": "v_taste_lab",
+        "name": "Taste Lab"
+      },
+      "performer": {
+        "id": "p_pasta_la_vista",
+        "name": "Pasta La Vista"
+      },
+      "description": "Fresh pasta workshop with tasting flight."
+    },
+    {
+      "id": "e_velvet_sax_sunset",
+      "title": "Velvet Sax Sunset Set",
+      "date": "2026-06-20",
+      "startTime": "19:00",
+      "endTime": "20:30",
+      "venue": {
+        "id": "v_groove_stage",
+        "name": "Groove Stage"
+      },
+      "performer": {
+        "id": "p_velvet_sax",
+        "name": "The Velvet Sax"
+      },
+      "description": "Golden-hour smooth-jazz performance at the main stage."
+    },
+    {
+      "id": "e_french_brunch_session",
+      "title": "French Brunch Session",
+      "date": "2026-06-21",
+      "startTime": "11:00",
+      "endTime": "12:30",
+      "venue": {
+        "id": "v_workshop_tent",
+        "name": "Workshop Tent"
+      },
+      "performer": {
+        "id": "p_gordon_blue",
+        "name": "Chef Gordon Blue"
+      },
+      "description": "Fine dining techniques adapted for festival kitchens."
+    },
+    {
+      "id": "e_closing_jam",
+      "title": "Closing Jam",
+      "date": "2026-06-21",
+      "startTime": "18:00",
+      "endTime": "19:30",
+      "venue": {
+        "id": "v_groove_stage",
+        "name": "Groove Stage"
+      },
+      "performer": {
+        "id": "p_swing_kings",
+        "name": "Swing Kings"
+      },
+      "description": "Final collaborative jam session to close the festival."
+    }
+  ]
+}
+  

@@ -1,0 +1,35 @@
+
+{
+  "page": 1,
+  "pageSize": 3,
+  "totalItems": 7,
+  "totalPages": 3,
+  "items": [
+
+    {
+      "id": "p_velvet_sax",
+      "name": "The Velvet Sax",
+      "category": "music",
+      "specialty": "Smooth Jazz",
+      "country": "US",
+      "description": "International smooth-jazz quartet led by tenor sax."
+    },
+    {
+      "id": "p_swing_kings",
+      "name": "Swing Kings",
+      "category": "music",
+      "specialty": "Electro Swing",
+      "country": "CZ",
+      "description": "Dance-driven blend of vintage swing and modern electronics."
+    },
+    {
+      "id": "p_soul_sisters",
+      "name": "Soul Sisters",
+      "category": "music",
+      "specialty": "R and B",
+      "country": "UK",
+      "description": "Vocal trio delivering contemporary soul standards."
+    }
+  ]
+}
+  

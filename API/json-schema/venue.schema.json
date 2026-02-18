@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "venue.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "type", "capacity", "indoor", "description"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^v_[a-z0-9_]+$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["main_stage", "culinary_zone", "lounge_stage", "workshop_area"]
+    },
+    "capacity": {
+      "type": "integer",
+      "minimum": 50,
+      "maximum": 5000
+    },
+    "indoor": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,201 @@
+openapi: 3.1.0
+info:
+  title: Prague GastroJazz Open API
+  version: 1.0.0
+  description: REST API contract generated from the festival XML model and XSLT JSON outputs.
+servers:
+  - url: https://api.gastrojazz.local
+    description: Production example server
+  - url: http://localhost:8080
+    description: Local development server
+paths:
+  /api/festival:
+    get:
+      operationId: getFestival
+      summary: Get festival identity and ticket overview
+      responses:
+        '200':
+          description: Festival identity, dates, links, and ticket plans.
+          content:
+            application/json:
+              schema:
+                $ref: './json-schema/festival.schema.json'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/venues:
+    get:
+      operationId: listVenues
+      summary: List all venues
+      responses:
+        '200':
+          description: Venue collection.
+          content:
+            application/json:
+              schema:
+                $ref: './json-schema/venues.schema.json'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/venues/{id}:
+    get:
+      operationId: getVenueById
+      summary: Get venue detail
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Venue identifier.
+          schema:
+            type: string
+            pattern: '^v_[a-z0-9_]+$'
+      responses:
+        '200':
+          description: Venue detail.
+          content:
+            application/json:
+              schema:
+                $ref: './json-schema/venue.schema.json'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/performers:
+    get:
+      operationId: listPerformers
+      summary: List performers with pagination
+      parameters:
+        - name: page
+          in: query
+          required: false
+          description: Page number, starting at 1.
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+        - name: pageSize
+          in: query
+          required: false
+          description: Number of items per page.
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 100
+            default: 3
+      responses:
+        '200':
+          description: Paginated performer collection.
+          content:
+            application/json:
+              schema:
+                $ref: './json-schema/performers.schema.json'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/performers/{id}:
+    get:
+      operationId: getPerformerById
+      summary: Get performer detail
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Performer identifier.
+          schema:
+            type: string
+            pattern: '^p_[a-z0-9_]+$'
+      responses:
+        '200':
+          description: Performer detail.
+          content:
+            application/json:
+              schema:
+                $ref: './json-schema/performer.schema.json'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/events:
+    get:
+      operationId: listEvents
+      summary: List program events with filters
+      parameters:
+        - name: day
+          in: query
+          required: false
+          description: Return events for a specific date.
+          schema:
+            type: string
+            format: date
+        - name: venueId
+          in: query
+          required: false
+          description: Filter by venue identifier.
+          schema:
+            type: string
+            pattern: '^v_[a-z0-9_]+$'
+        - name: performerId
+          in: query
+          required: false
+          description: Filter by performer identifier.
+          schema:
+            type: string
+            pattern: '^p_[a-z0-9_]+$'
+      responses:
+        '200':
+          description: Event collection matching provided filters.
+          content:
+            application/json:
+              schema:
+                $ref: './json-schema/events.schema.json'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /api/events/{id}:
+    get:
+      operationId: getEventById
+      summary: Get event detail
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Event identifier.
+          schema:
+            type: string
+            pattern: '^e_[a-z0-9_]+$'
+      responses:
+        '200':
+          description: Event detail.
+          content:
+            application/json:
+              schema:
+                $ref: './json-schema/event.schema.json'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+components:
+  responses:
+    BadRequest:
+      description: Invalid request parameters.
+      content:
+        application/json:
+          schema:
+            $ref: './json-schema/validation-error.schema.json'
+    NotFound:
+      description: Resource not found.
+      content:
+        application/json:
+          schema:
+            $ref: './json-schema/error.schema.json'

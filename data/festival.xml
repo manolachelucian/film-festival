@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<festival>
+  <meta>
+    <id>prague-gastrojazz-open-2026</id>
+    <name>Prague GastroJazz Open 2026</name>
+    <description>Three-day city festival combining live jazz and curated culinary experiences.</description>
+    <year>2026</year>
+    <dates>
+      <start>2026-06-19</start>
+      <end>2026-06-21</end>
+    </dates>
+    <location>
+      <siteName>Strelecky Island</siteName>
+      <city>Prague</city>
+      <country>CZ</country>
+      <timezone>Europe/Prague</timezone>
+    </location>
+    <links>
+      <website>https://www.gastrojazz.cz</website>
+      <tickets>https://tickets.gastrojazz.cz</tickets>
+      <instagram>https://www.instagram.com/gastrojazzopen</instagram>
+      <facebook>https://www.facebook.com/gastrojazzopen</facebook>
+    </links>
+  </meta>
+
+  <tickets>
+    <ticket id="t_basic_day">
+      <name>Basic Day Pass</name>
+      <tier>basic</tier>
+      <validDays>1</validDays>
+      <price currency="CZK">990</price>
+      <description>Access to all music stages for one selected day.</description>
+    </ticket>
+    <ticket id="t_gastro_weekend">
+      <name>Gastro Weekend Pass</name>
+      <tier>gastro</tier>
+      <validDays>3</validDays>
+      <price currency="CZK">2590</price>
+      <description>Full festival access plus five tasting tokens.</description>
+    </ticket>
+    <ticket id="t_vip_weekend">
+      <name>VIP Weekend Pass</name>
+      <tier>vip</tier>
+      <validDays>3</validDays>
+      <price currency="CZK">4990</price>
+      <description>Priority seating, backstage lounge, and chef meet-and-greet.</description>
+    </ticket>
+  </tickets>
+
+  <venues>
+    <venue id="v_groove_stage">
+      <name>Groove Stage</name>
+      <type>main_stage</type>
+      <capacity>2500</capacity>
+      <indoor>false</indoor>
+      <description>Large open-air stage for headline concerts.</description>
+    </venue>
+    <venue id="v_taste_lab">
+      <name>Taste Lab</name>
+      <type>culinary_zone</type>
+      <capacity>700</capacity>
+      <indoor>true</indoor>
+      <description>Covered culinary zone for demonstrations and tastings.</description>
+    </venue>
+    <venue id="v_river_lounge">
+      <name>River Lounge</name>
+      <type>lounge_stage</type>
+      <capacity>400</capacity>
+      <indoor>false</indoor>
+      <description>Relaxed waterfront stage for acoustic and chill sets.</description>
+    </venue>
+    <venue id="v_workshop_tent">
+      <name>Workshop Tent</name>
+      <type>workshop_area</type>
+      <capacity>300</capacity>
+      <indoor>true</indoor>
+      <description>Hands-on area for masterclasses and food labs.</description>
+    </venue>
+  </venues>
+
+  <performers>
+    <performer id="p_velvet_sax">
+      <name>The Velvet Sax</name>
+      <category>music</category>
+      <specialty>Smooth Jazz</specialty>
+      <country>US</country>
+      <description>International smooth-jazz quartet led by tenor sax.</description>
+    </performer>
+    <performer id="p_swing_kings">
+      <name>Swing Kings</name>
+      <category>music</category>
+      <specialty>Electro Swing</specialty>
+      <country>CZ</country>
+      <description>Dance-driven blend of vintage swing and modern electronics.</description>
+    </performer>
+    <performer id="p_soul_sisters">
+      <name>Soul Sisters</name>
+      <category>music</category>
+      <specialty>R and B</specialty>
+      <country>UK</country>
+      <description>Vocal trio delivering contemporary soul standards.</description>
+    </performer>
+    <performer id="p_gordon_blue">
+      <name>Chef Gordon Blue</name>
+      <category>chef</category>
+      <specialty>French Cuisine</specialty>
+      <country>FR</country>
+      <description>Michelin-star guest chef focused on modern French tasting menus.</description>
+    </performer>
+    <performer id="p_tea_master_li">
+      <name>Tea Master Li</name>
+      <category>chef</category>
+      <specialty>Tea Ceremony</specialty>
+      <country>CN</country>
+      <description>Guided tea rituals and sensory pairing sessions.</description>
+    </performer>
+    <performer id="p_kenji">
+      <name>Sushi Master Kenji</name>
+      <category>chef</category>
+      <specialty>Japanese Cuisine</specialty>
+      <country>JP</country>
+      <description>Knife-skill performance and omakase tasting show.</description>
+    </performer>
+    <performer id="p_pasta_la_vista">
+      <name>Pasta La Vista</name>
+      <category>chef</category>
+      <specialty>Italian Cuisine</specialty>
+      <country>IT</country>
+      <description>Live pasta craftsmanship and regional sauce pairings.</description>
+    </performer>
+  </performers>
+
+  <events>
+    <event id="e_opening_swing">
+      <title>Opening Swing</title>
+      <date>2026-06-19</date>
+      <startTime>16:00</startTime>
+      <endTime>17:00</endTime>
+      <venueRef>v_groove_stage</venueRef>
+      <performerRef>p_swing_kings</performerRef>
+      <description>High-energy opening set with electro-swing classics.</description>
+    </event>
+    <event id="e_sushi_art_show">
+      <title>Sushi Art Show</title>
+      <date>2026-06-19</date>
+      <startTime>16:00</startTime>
+      <endTime>17:00</endTime>
+      <venueRef>v_taste_lab</venueRef>
+      <performerRef>p_kenji</performerRef>
+      <description>Interactive sushi preparation from premium ingredients.</description>
+    </event>
+    <event id="e_soul_sisters_headline">
+      <title>Soul Sisters Headline</title>
+      <date>2026-06-19</date>
+      <startTime>20:00</startTime>
+      <endTime>21:30</endTime>
+      <venueRef>v_groove_stage</venueRef>
+      <performerRef>p_soul_sisters</performerRef>
+      <description>Main evening concert by the Soul Sisters.</description>
+    </event>
+    <event id="e_morning_tea_ritual">
+      <title>Morning Tea Ritual</title>
+      <date>2026-06-20</date>
+      <startTime>10:00</startTime>
+      <endTime>11:00</endTime>
+      <venueRef>v_river_lounge</venueRef>
+      <performerRef>p_tea_master_li</performerRef>
+      <description>Mindful tea ceremony paired with ambient jazz.</description>
+    </event>
+    <event id="e_pasta_making_live">
+      <title>Pasta Making Live</title>
+      <date>2026-06-20</date>
+      <startTime>13:00</startTime>
+      <endTime>14:00</endTime>
+      <venueRef>v_taste_lab</venueRef>
+      <performerRef>p_pasta_la_vista</performerRef>
+      <description>Fresh pasta workshop with tasting flight.</description>
+    </event>
+    <event id="e_velvet_sax_sunset">
+      <title>Velvet Sax Sunset Set</title>
+      <date>2026-06-20</date>
+      <startTime>19:00</startTime>
+      <endTime>20:30</endTime>
+      <venueRef>v_groove_stage</venueRef>
+      <performerRef>p_velvet_sax</performerRef>
+      <description>Golden-hour smooth-jazz performance at the main stage.</description>
+    </event>
+    <event id="e_french_brunch_session">
+      <title>French Brunch Session</title>
+      <date>2026-06-21</date>
+      <startTime>11:00</startTime>
+      <endTime>12:30</endTime>
+      <venueRef>v_workshop_tent</venueRef>
+      <performerRef>p_gordon_blue</performerRef>
+      <description>Fine dining techniques adapted for festival kitchens.</description>
+    </event>
+    <event id="e_closing_jam">
+      <title>Closing Jam</title>
+      <date>2026-06-21</date>
+      <startTime>18:00</startTime>
+      <endTime>19:30</endTime>
+      <venueRef>v_groove_stage</venueRef>
+      <performerRef>p_swing_kings</performerRef>
+      <description>Final collaborative jam session to close the festival.</description>
+    </event>
+  </events>
+</festival>
